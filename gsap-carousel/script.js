@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         const slideContent = slide.querySelectorAll("p, a");
-        console.log(slideContent);
         slideContent.forEach(element => {
             SplitText.create(element, {
                 type: 'lines',
