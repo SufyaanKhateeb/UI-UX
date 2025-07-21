@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1,
+p,
+a {
+    text-transform: uppercase;
+    color: #fff;
+    /* color: rgb(202, 199, 11); */
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: -0.1rem;
+}
+
+p,
+a {
+    text-decoration: none;
+    font-family: "DM Mono";
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: -0.01rem;
+}
+
+.slider {
+    position: relative;
+    width: 100vw;
+    height: 100svh;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.slide,
+.slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100svh;
+}
+
+.slide {
+    will-change: transform;
+}
+
+.slide-header {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.slide-description {
+    width: 60%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.slide-info {
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+    width: 100vw;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.slide-tags {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-index-wrapper {
+    display: flex;
+}
+
+.slide-index-wrapper p {
+    text-align: center;
+    width: 2rem;
+}
+
+.slide-tags p:first-child {
+    margin-bottom: 1rem;
+}
+
+.line, .word {
+    position: relative;
+    display: inline-block;
+    will-change: transform;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+
+    .slide-description {
+        font-size: 0.8rem;
+    }
+
+    .slide-header {
+        top: 50%;
+        bottom: unset;;
+        transform: translate(-50%);
+        width: 90%;
+    }
+
+    .slide-description {
+        width: 100%;
+    }
+}
