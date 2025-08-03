@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             opacity: 0,
             rotation: 30,
             y: exitY,
-            duration: 2,
+            duration: 1.25,
             ease: "power4.inOut",
             force3d: true,
             onComplete: () => {
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gsap.to(newSlide, {
                 y: 0,
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-                duration: 1.5,
+                duration: 0.75,
                 ease: "power4.inOut",
                 force3d: true,
                 onStart: () => {
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const headerWords = newSlide.querySelectorAll(".slide-title .word");
                     t1.to(headerWords, {
                         y: 0,
-                        duration: 1,
+                        duration: 0.75,
                         ease: "power4.out",
                         stagger: 0.1,
                         force3d: true,
@@ -188,21 +188,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     t1.to(tagsLines, {
                         y: 0,
-                        duration: 1,
+                        duration: 0.75,
                         ease: "power4.out",
                         stagger: 0.1,
                     }, "-=0.75")
 
                     t1.to(indexLines, {
                         y: 0,
-                        duration: 1,
+                        duration: 0.75,
                         ease: "power4.out",
                         stagger: 0.1,
                     }, "<")
 
                     t1.to(descriptionLines, {
                         y: 0,
-                        duration: 1,
+                        duration: 0.75,
                         ease: "power4.out",
                         stagger: 0.1,
                     }, "<")
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const linkLines = newSlide.querySelectorAll(".slide-link .line");
                     t1.to(linkLines, {
                         y: 0,
-                        duration: 1,
+                        duration: 0.75,
                         ease: "power4.out",
                         stagger: 0.1,
                         // force3d: true,
