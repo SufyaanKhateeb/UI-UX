@@ -124,11 +124,11 @@ function updateParallax() {
             return;
         }
 
-        const slideCenter = slideRect.left + slideRect;
+        const slideCenter = slideRect.left + slideRect.right / 2;
         const distanceFromCenter = slideCenter - viewportCenter;
         const parallaxOffset = distanceFromCenter * -0.25;
 
-        img.style.transform = `translateX(${parallaxOffset}px scale(2.25))`;
+        img.style.transform = `translateX(${parallaxOffset}px) scale(2.25)`;
     });
 }
 
@@ -252,7 +252,7 @@ function initializeEventListeners() {
 function initializeSlider() {
     initializeSlides();
     initializeEventListeners();
-    animate();
+    // animate();
 }
 
 document.addEventListener("DOMContentLoaded", initializeSlider);
