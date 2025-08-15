@@ -151,7 +151,7 @@ function animate() {
     updateSlidePositions();
     updateParallax();
 
-    requestAnimationFrame(updateFunc);
+    requestAnimationFrame(animate);
 }
 
 function handleWheel(e) {
@@ -163,7 +163,6 @@ function handleWheel(e) {
     state.lastScrollTime = Date.now();
     const scrollDelta = e.deltaY * config.SCROLL_SPEED;
     state.targetX -= Math.max(Math.min(scrollDelta, config.MAX_VELOCITY), -config.MAX_VELOCITY);
-    animate();
 }
 
 function handleTouchStart(e) {
@@ -252,7 +251,7 @@ function initializeEventListeners() {
 function initializeSlider() {
     initializeSlides();
     initializeEventListeners();
-    // animate();
+    animate();
 }
 
 document.addEventListener("DOMContentLoaded", initializeSlider);
